@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>None</loc>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/basic/stdin/</loc>
      <lastmod>2020-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/basic/data_structures/</loc>
      <lastmod>2020-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/basic/combinatorics/</loc>
      <lastmod>2020-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/dfs/</loc>
      <lastmod>2020-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/bfs/</loc>
+     <lastmod>2020-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/factor/</loc>
+     <lastmod>2020-01-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/union_find/</loc>
      <lastmod>2020-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>

@@ -11,6 +11,10 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/note/">
+      
+      
+        <meta name="author" content="xkumiyu">
       
       
         <meta name="lang:clipboard.copy" content="クリップボードへコピー">
@@ -65,6 +69,31 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-44938218-6", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -92,7 +121,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="Coding Challenge Note" class="md-header-nav__button md-logo">
+        <a href="https://xkumiyu.github.io/coding-challenge-note/" title="Coding Challenge Note" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -162,7 +191,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href=".." title="Coding Challenge Note" class="md-nav__button md-logo">
+    <a href="https://xkumiyu.github.io/coding-challenge-note/" title="Coding Challenge Note" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
@@ -211,6 +240,18 @@
   <li class="md-nav__item">
     <a href="../basic/data_structures/" title="データ構造" class="md-nav__link">
       データ構造
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/combinatorics/" title="組合せ論" class="md-nav__link">
+      組合せ論
     </a>
   </li>
 
@@ -312,7 +353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/factor.md" title="約数" class="md-nav__link">
+    <a href="../algorithms/factor/" title="約数" class="md-nav__link">
       約数
     </a>
   </li>
@@ -399,13 +440,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    順列と組み合わせ、階乗
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#mod" class="md-nav__link">
     mod
   </a>
@@ -413,14 +447,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     最大公約数と最小公倍数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     文字列
   </a>
   
@@ -434,35 +468,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     最短経路
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     計算量, 高速化
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     メモ化
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     再帰回数の上限
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     その他気をつけること
   </a>
   
@@ -528,35 +562,6 @@
 <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </pre></div>
 
-<h2 id="_3">順列と組み合わせ、階乗<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="c1"># 配列nからk個を選ぶ組み合わせのリスト</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
-<span class="n">combinations</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
-
-<span class="c1"># n個からk個を選ぶ組み合わせ数（nCk）, scipy &gt; 1.0.0 は、scipy.</span>
-<span class="c1"># n=10^4くらいまで</span>
-<span class="kn">from</span> <span class="nn">scipy.misc</span> <span class="kn">import</span> <span class="n">comb</span>
-<span class="n">comb</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># 配列nからk個を選ぶ順列のリスト</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">permutations</span>
-<span class="n">permutations</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
-
-<span class="c1"># 階乗</span>
-<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span>
-<span class="n">factorial</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># 階乗テーブル</span>
-<span class="n">fac</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">N</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
-    <span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fac</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span>
-<span class="c1"># 逆元テーブル</span>
-<span class="n">inv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">N</span>
-<span class="n">inv</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">fac</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">mod</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mod</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">inv</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span>
-</pre></div>
-
 <h2 id="mod">mod<a class="headerlink" href="#mod" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="c1"># b　の逆元</span>
 <span class="c1"># mod空間では除算が逆元の積になる</span>
@@ -567,7 +572,7 @@
 <span class="c1"># が同じ</span>
 </pre></div>
 
-<h2 id="_4">最大公約数と最小公倍数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">最大公約数と最小公倍数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="c1"># 最大公約数, python 3.5 から math.gcd</span>
 <span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">gcd</span>
 <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -577,7 +582,7 @@
   <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">//</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 
-<h2 id="_5">文字列<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_4">文字列<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
 
 <span class="c1"># 大文字/小文字に変換</span>
@@ -596,15 +601,15 @@
         <span class="k">return</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 
-<h2 id="_6">最短経路<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">最短経路<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.sparse.csgraph</span> <span class="kn">import</span> <span class="n">floyd_warshall</span>
 </pre></div>
 
-<h2 id="_7">計算量, 高速化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">計算量, 高速化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>pythonでTLEの場合、pypyを試してみる</li>
 </ul>
-<h2 id="_8">メモ化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_7">メモ化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
 
 <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
@@ -612,14 +617,14 @@
     <span class="k">pass</span>
 </pre></div>
 
-<h2 id="_9">再帰回数の上限<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_8">再帰回数の上限<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <p>デフォルトでは1000回までである
 再帰関数を用いているときREになった場合は上限を上げてみる</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
-<h2 id="_10">その他気をつけること<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h2 id="_9">その他気をつけること<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <ul>
 <li>デバッグ時の<code>print</code>がないか確認する</li>
 <li><code>Yes</code>と<code>YES</code>など出力に気をつける</li>
