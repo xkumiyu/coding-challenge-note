@@ -17,6 +17,7 @@
 ### Number Theory
 
 - [約数](algorithms/factor.md)
+- [線分交差判定](algorithms/is_ientersected.md)
 
 ### Data Structure
 

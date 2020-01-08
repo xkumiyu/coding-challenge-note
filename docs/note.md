@@ -54,7 +54,6 @@ if i != len(A) and A[i] == x:
 n = len(A) - bisect_left(A, x)
 ```
 
-
 ## mod
 
 ``` py
@@ -137,4 +136,4 @@ sys.setrecursionlimit(10**6)
 - デバッグ時の`print`がないか確認する
 - `Yes`と`YES`など出力に気をつける
 - 出力形式にも気をつける
-  - 1行でスペース区切りとか、複数行とか
+    - 1行でスペース区切りとか、複数行とか
