@@ -4,6 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+black = "*"
+flake8 = "*"
+pytest = "*"
+pytest-cov = "*"
 
 [packages]
 mkdocs = "*"
@@ -11,7 +15,11 @@ mkdocs-material = "*"
 pymdown-extensions = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.7"
 
 [scripts]
 s = "mkdocs serve"
+deploy = "mkdocs gh-deploy"
+
+[pipenv]
+allow_prereleases = true
