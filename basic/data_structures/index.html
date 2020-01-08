@@ -317,7 +317,21 @@
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    初期化
+    デフォルト値を持つ辞書の初期化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    辞書のソート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    カウンター
   </a>
   
 </li>
@@ -328,23 +342,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     集合
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     キュー
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     優先度付きキュー
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    最小ヒープ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    最大ヒープ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -591,7 +631,21 @@
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    初期化
+    デフォルト値を持つ辞書の初期化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    辞書のソート
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    カウンター
   </a>
   
 </li>
@@ -602,23 +656,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     集合
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     キュー
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
     優先度付きキュー
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    最小ヒープ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    最大ヒープ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -642,13 +722,14 @@
                 <h1 id="_1">データ構造<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <h2 id="_2">リスト<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="_3">リストの初期化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>MUST</strong>: 多重リストは内包表記で初期化する</li>
-</ul>
 <div class="codehilite"><pre><span></span><span class="c1"># x[N][M]</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">M</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
 </pre></div>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>多重リストは内包表記で初期化する</p>
+</div>
 <h3 id="_4">多重リストのループ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>product</code> を使うと短く書ける</li>
@@ -691,19 +772,18 @@
 </pre></div>
 
 <h2 id="_6">辞書<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">初期化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="c1">#</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-
-<span class="c1"># カウンター</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-
-<span class="c1"># オペレーター, lamndaより高速</span>
-<span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
-<span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<h3 id="_7">デフォルト値を持つ辞書の初期化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
 </pre></div>
 
-<p>辞書のソート</p>
+<h3 id="_8">辞書のソート<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>itemgetter</code>を使用するほうがlamndaより高速</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
 <div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
 
 <span class="c1"># key</span>
@@ -715,31 +795,40 @@
 <span class="p">[(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
 </pre></div>
 
-<h2 id="_8">集合<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>SHOULD</strong>: 重複を含まない要素の探索の場合は <code>set</code> を使う</li>
-<li><code>list</code>: O(N)</li>
-<li><code>set</code>: O(1)</li>
-</ul>
+<h3 id="_9">カウンター<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+</pre></div>
+
+<h2 id="_10">集合<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">x</span> <span class="ow">in</span> <span class="nb">set</span>
 </pre></div>
 
-<h2 id="_9">キュー<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>重複を含まない要素の探索の場合は <code>set</code> を使う</p>
+</div>
+<ul>
+<li><code>list</code>: O(N)</li>
+<li><code>set</code>: O(1)</li>
+</ul>
+<h2 id="_11">キュー<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="n">que</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
 </pre></div>
 
-<h2 id="_10">優先度付きキュー<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<p>heappush: O(logN)
-heappop: O(1)</p>
-<p>最小ヒープ</p>
+<h3 id="_12">優先度付きキュー<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>heappush: O(logN)</li>
+<li>heappop: O(1)</li>
+</ul>
+<h4 id="_13">最小ヒープ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
 <span class="n">que</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">heappush</span><span class="p">(</span><span class="n">que</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">que</span><span class="p">)</span>
 </pre></div>
 
-<p>最大ヒープ</p>
+<h4 id="_14">最大ヒープ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
 <span class="n">que</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">heappush</span><span class="p">(</span><span class="n">que</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
