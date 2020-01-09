@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/todo/">
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/make_divisors/">
       
       
         <meta name="author" content="xkumiyu">
@@ -35,18 +35,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>ToDo - Coding Challenge Note</title>
+        <title>約数を列挙 - Coding Challenge Note</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -55,7 +55,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
@@ -64,7 +64,7 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#todo" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                ToDo
+                約数を列挙
               
             </span>
           
@@ -226,7 +226,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic/stdin/" title="標準入力" class="md-nav__link">
+    <a href="../../basic/stdin/" title="標準入力" class="md-nav__link">
       標準入力
     </a>
   </li>
@@ -238,7 +238,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic/data_structures/" title="データ構造" class="md-nav__link">
+    <a href="../../basic/data_structures/" title="データ構造" class="md-nav__link">
       データ構造
     </a>
   </li>
@@ -250,7 +250,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../basic/combinatorics/" title="組合せ論" class="md-nav__link">
+    <a href="../../basic/combinatorics/" title="組合せ論" class="md-nav__link">
       組合せ論
     </a>
   </li>
@@ -265,10 +265,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Algorithms
@@ -305,7 +307,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/dfs/" title="深さ優先探索(DFS)" class="md-nav__link">
+    <a href="../dfs/" title="深さ優先探索(DFS)" class="md-nav__link">
       深さ優先探索(DFS)
     </a>
   </li>
@@ -317,7 +319,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/bfs/" title="幅優先探索(BFS)" class="md-nav__link">
+    <a href="../bfs/" title="幅優先探索(BFS)" class="md-nav__link">
       幅優先探索(BFS)
     </a>
   </li>
@@ -332,10 +334,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
     
     <label class="md-nav__link" for="nav-2-2">
       Number Theory
@@ -353,7 +357,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/count_divisor/" title="約数の個数をカウント" class="md-nav__link">
+    <a href="../count_divisor/" title="約数の個数をカウント" class="md-nav__link">
       約数の個数をカウント
     </a>
   </li>
@@ -363,11 +367,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../algorithms/make_divisors/" title="約数を列挙" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        約数を列挙
+      </label>
+    
+    <a href="./" title="約数を列挙" class="md-nav__link md-nav__link--active">
       約数を列挙
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    計算量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -377,7 +433,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/is_prime/" title="素数判定" class="md-nav__link">
+    <a href="../is_prime/" title="素数判定" class="md-nav__link">
       素数判定
     </a>
   </li>
@@ -389,7 +445,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/prime_factorize/" title="素因数分解" class="md-nav__link">
+    <a href="../prime_factorize/" title="素因数分解" class="md-nav__link">
       素因数分解
     </a>
   </li>
@@ -401,7 +457,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/prime_boolean_table/" title="素数を列挙" class="md-nav__link">
+    <a href="../prime_boolean_table/" title="素数を列挙" class="md-nav__link">
       素数を列挙
     </a>
   </li>
@@ -437,7 +493,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/union_find/" title="Union Find" class="md-nav__link">
+    <a href="../union_find/" title="Union Find" class="md-nav__link">
       Union Find
     </a>
   </li>
@@ -449,7 +505,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/weighted_union_find/" title="Union Find" class="md-nav__link">
+    <a href="../weighted_union_find/" title="Union Find" class="md-nav__link">
       Union Find
     </a>
   </li>
@@ -482,6 +538,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    計算量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -493,10 +579,30 @@
               
                 
                 
-                <h1 id="todo">ToDo<a class="headerlink" href="#todo" title="Permanent link">&para;</a></h1>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> bit全探索</li>
-</ul>
+                <h1 id="_1">約数を列挙<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>整数<span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>の約数の列挙する</p>
+<h2 id="_2">計算量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><span><span class="MathJax_Preview">O(\sqrt{N})</span><script type="math/tex">O(\sqrt{N})</script></span></p>
+<h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">make_divisors</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span><span class="p">,</span> <span class="n">divisors</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">divisors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span>
+                <span class="n">divisors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span> <span class="o">//</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">divisors</span>
+</pre></div>
+
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>出力はソートされないことに注意</p>
+</div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">make_divisors</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
                 
                   
                 
@@ -515,6 +621,41 @@
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../count_divisor/" title="約数の個数をカウント" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                約数の個数をカウント
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../is_prime/" title="素数判定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                素数判定
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -531,7 +672,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/xkumiyu" class="md-footer-social__link fa fa-github"></a>
     
@@ -545,30 +686,30 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
         
         
           
-          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
               
               
-                <script src="../assets/javascripts/lunr/lunr.ja.js"></script>
+                <script src="../../assets/javascripts/lunr/lunr.ja.js"></script>
               
             
           
             
           
           
-            <script src="../assets/javascripts/lunr/lunr.multi.js"></script>
+            <script src="../../assets/javascripts/lunr/lunr.multi.js"></script>
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -2,37 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://xkumiyu.github.io/coding-challenge-note/basic/stdin/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://xkumiyu.github.io/coding-challenge-note/basic/data_structures/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://xkumiyu.github.io/coding-challenge-note/basic/combinatorics/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/dfs/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/bfs/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/factor/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/count_divisor/</loc>
+     <lastmod>2020-01-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/make_divisors/</loc>
+     <lastmod>2020-01-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/is_prime/</loc>
+     <lastmod>2020-01-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/prime_factorize/</loc>
+     <lastmod>2020-01-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/prime_boolean_table/</loc>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/union_find/</loc>
-     <lastmod>2020-01-08</lastmod>
+     <lastmod>2020-01-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://xkumiyu.github.io/coding-challenge-note/algorithms/weighted_union_find/</loc>
+     <lastmod>2020-01-09</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

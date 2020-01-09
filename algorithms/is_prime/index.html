@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/factor/">
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/is_prime/">
       
       
         <meta name="author" content="xkumiyu">
@@ -40,7 +40,7 @@
     
     
       
-        <title>約数 - Coding Challenge Note</title>
+        <title>素数判定 - Coding Challenge Note</title>
       
     
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                約数
+                素数判定
               
             </span>
           
@@ -355,6 +355,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../count_divisor/" title="約数の個数をカウント" class="md-nav__link">
+      約数の個数をカウント
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../make_divisors/" title="約数を列挙" class="md-nav__link">
+      約数を列挙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -366,11 +390,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        約数
+        素数判定
       </label>
     
-    <a href="./" title="約数" class="md-nav__link md-nav__link--active">
-      約数
+    <a href="./" title="素数判定" class="md-nav__link md-nav__link--active">
+      素数判定
     </a>
     
       
@@ -385,21 +409,22 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    約数の個数をカウント
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+    計算量
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
   
 </li>
       
@@ -411,6 +436,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prime_factorize/" title="素因数分解" class="md-nav__link">
+      素因数分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prime_boolean_table/" title="素数を列挙" class="md-nav__link">
+      素数を列挙
+    </a>
   </li>
 
         
@@ -450,6 +499,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../weighted_union_find/" title="Union Find" class="md-nav__link">
+      Union Find
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -482,21 +543,22 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    約数の個数をカウント
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+    計算量
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
   
 </li>
       
@@ -517,24 +579,23 @@
               
                 
                 
-                <h1 id="_1">約数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">約数の個数をカウント<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>計算量: O(√(N)), N=10^12 で 0.3sec</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">count_divisor</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">i</span><span class="p">,</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+                <h1 id="_1">素数判定<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>整数<span><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>の素数か否かを判定する</p>
+<h2 id="_2">計算量<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>最悪計算量: <span><span class="MathJax_Preview">O(\sqrt{N})</span><script type="math/tex">O(\sqrt{N})</script></span></p>
+<h2 id="_3">コード<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
-                <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">count</span> <span class="o">+=</span> <span class="mi">2</span>
+            <span class="k">return</span> <span class="kc">False</span>
         <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">coun</span>
+    <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 
-<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">count_divisor</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="mi">6</span>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">is_prime</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="kc">False</span>
 </pre></div>
                 
                   
@@ -557,7 +618,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../bfs/" title="幅優先探索(BFS)" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../make_divisors/" title="約数を列挙" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -566,19 +627,19 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                幅優先探索(BFS)
+                約数を列挙
               </span>
             </div>
           </a>
         
         
-          <a href="../union_find/" title="Union Find" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../prime_factorize/" title="素因数分解" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                Union Find
+                素因数分解
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

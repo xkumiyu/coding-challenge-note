@@ -355,8 +355,56 @@
 
 
   <li class="md-nav__item">
-    <a href="../factor/" title="約数" class="md-nav__link">
-      約数
+    <a href="../count_divisor/" title="約数の個数をカウント" class="md-nav__link">
+      約数の個数をカウント
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../make_divisors/" title="約数を列挙" class="md-nav__link">
+      約数を列挙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../is_prime/" title="素数判定" class="md-nav__link">
+      素数判定
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prime_factorize/" title="素因数分解" class="md-nav__link">
+      素因数分解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../prime_boolean_table/" title="素数を列挙" class="md-nav__link">
+      素数を列挙
     </a>
   </li>
 
@@ -401,10 +449,58 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Union Find
+      </label>
+    
     <a href="./" title="Union Find" class="md-nav__link md-nav__link--active">
       Union Find
     </a>
     
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    計算量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../weighted_union_find/" title="Union Find" class="md-nav__link">
+      Union Find
+    </a>
   </li>
 
         
@@ -435,6 +531,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    計算量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    コード
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -447,6 +566,13 @@
                 
                 
                 <h1 id="union-find">Union Find<a class="headerlink" href="#union-find" title="Permanent link">&para;</a></h1>
+<h2 id="_1">計算量<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><span><span class="MathJax_Preview">O(\alpha(N))</span><script type="math/tex">O(\alpha(N))</script></span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span><span class="MathJax_Preview">\alpha(\cdot)</span><script type="math/tex">\alpha(\cdot)</script></span>はアッカーマン関数であり、<span><span class="MathJax_Preview">\log</span><script type="math/tex">\log</script></span>より小さい</p>
+</div>
+<h2 id="_2">コード<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">UnionFind</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">par</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
@@ -503,7 +629,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../factor/" title="約数" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../prime_boolean_table/" title="素数を列挙" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -512,11 +638,25 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                約数
+                素数を列挙
               </span>
             </div>
           </a>
         
+        
+          <a href="../weighted_union_find/" title="Union Find" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                Union Find
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
