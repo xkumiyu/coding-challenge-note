@@ -55,10 +55,12 @@ A = [int(x) for x in input().split()]
 S = [list(input()) for _ in range(H)]
 ```
 
-``` python
->>> print(S)
-[['#', '.', '.', '#'], ['.', '.', '#', '#']]
-```
+!!! Example
+
+    ``` py
+    >>> print(S)
+    [['#', '.', '.', '#'], ['.', '.', '#', '#']]
+    ```
 
 ### 複数行の数字
 
@@ -86,10 +88,12 @@ A = [int(input()) for _ in range(N)]
 A = [[int(x) for x in input().split()] for _ in range(H)]
 ```
 
-``` py
->>> print(A)
-[[1, 4], [2, 5], [3, 6]]
-```
+!!! Example
+
+    ``` py
+    >>> print(A)
+    [[1, 4], [2, 5], [3, 6]]
+    ```
 
 #### 別々の1次元リスト
 
@@ -99,12 +103,14 @@ for i in range(N):
     a[i], b[i] = map(int, input().split())
 ```
 
-``` py
->>> print(a)
-[1, 2, 3]
->>> print(b)
-[4, 5, 6]
-```
+!!! Example
+
+    ``` py
+    >>> print(a)
+    [1, 2, 3]
+    >>> print(b)
+    [4, 5, 6]
+    ```
 
 ## 標準入力の高速化
 

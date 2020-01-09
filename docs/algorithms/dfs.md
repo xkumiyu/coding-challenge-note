@@ -13,17 +13,17 @@
 ## 再帰あり
 
 ``` py
-    def dfs(graph, visited, v):
-        visited[v] = True
-        # do something with v
+def dfs(graph, visited, v):
+    visited[v] = True
+    # do something with v
 
-        for u in graph[v]:
-            if visited[u]:
-                continue
-            dfs(graph, visited, u)
+    for u in graph[v]:
+        if visited[u]:
+            continue
+        dfs(graph, visited, u)
 
-    visited = [False] * len(graph)
-    dfs(graph, visited, start)
+visited = [False] * len(graph)
+dfs(graph, visited, start)
 ```
 
 ## 再帰なし
@@ -36,13 +36,11 @@ def dfs(graph, start):
 
     while len(stack) != 0:
         v = stack.pop()
-        print("v = ", v)
         # do something with v
 
         for u in graph[v]:
             if visited:
                 continue
-            print("  u = ", u)
             stack.append(u)
             visited[u] = True
 ```

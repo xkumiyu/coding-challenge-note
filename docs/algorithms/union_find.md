@@ -1,5 +1,14 @@
 # Union Find
 
+## 計算量
+
+$O(\alpha(N))$
+
+!!! Note
+    $\alpha(\cdot)$はアッカーマン関数であり、$\log$より小さい
+
+## コード
+
 ``` python
 class UnionFind(object):
     def __init__(self, n=1):

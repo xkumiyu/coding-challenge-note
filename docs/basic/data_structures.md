@@ -18,24 +18,24 @@ x = [[None] * M for _ in range(N)]
 
 ``` py
 from itertools import product
-
-for p in product():
-    pass
 ```
 
-``` py
->>> for p in product([0, 1], repeat=3):
-...     print(p)
-...
-(0, 0, 0)
-(0, 0, 1)
-(0, 1, 0)
-(0, 1, 1)
-(1, 0, 0)
-(1, 0, 1)
-(1, 1, 0)
-(1, 1, 1)
-```
+!!! Example
+
+    ``` py
+    >>> from itertools import product
+    >>> for p in product([0, 1], repeat=3):
+    ...     print(p)
+    ...
+    (0, 0, 0)
+    (0, 0, 1)
+    (0, 1, 0)
+    (0, 1, 1)
+    (1, 0, 0)
+    (1, 0, 1)
+    (1, 1, 0)
+    (1, 1, 1)
+    ```
 
 ### 2次元リストをflatten（一次元）に変換する
 
@@ -43,11 +43,13 @@ for p in product():
 [x for l in A for x in l]
 ```
 
-``` py
->>> A = [[0, 1], [2, 3]]
->>> [x for l in A for x in l]
-[0, 1, 2, 3]
-```
+!!! Example
+
+    ``` py
+    >>> A = [[0, 1], [2, 3]]
+    >>> [x for l in A for x in l]
+    [0, 1, 2, 3]
+    ```
 
 ### リストの出力
 
@@ -55,11 +57,13 @@ for p in product():
 print(' '.join(map(str, ans)))
 ```
 
-``` py
->>> ans = [1, 2, 3]
->>> print(' '.join(map(str, ans)))
-1 2 3
-```
+!!! Example
+
+    ``` py
+    >>> ans = [1, 2, 3]
+    >>> print(' '.join(map(str, ans)))
+    1 2 3
+    ```
 
 ## 辞書
 
@@ -78,17 +82,20 @@ from operator import itemgetter
 sorted(x, key=itemgetter(0))
 ```
 
-``` py
->>> x = {"a": 2, "b": 1}
+!!! Example
 
-# key
->>> sorted(x, key=itemgetter(0))
-[('a', 2), ('b', 1)]
+    ``` py
+    >>> from operator import itemgetter
+    >>> x = {"a": 2, "b": 1}
 
-# value
->>> sorted(x, key=itemgetter(1))
-[('b', 1), ('a', 2)]
-```
+    # key
+    >>> sorted(x, key=itemgetter(0))
+    [('a', 2), ('b', 1)]
+
+    # value
+    >>> sorted(x, key=itemgetter(1))
+    [('b', 1), ('a', 2)]
+    ```
 
 ### カウンター
 

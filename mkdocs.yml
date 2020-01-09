@@ -60,6 +60,11 @@ nav:
       - 深さ優先探索(DFS): algorithms/dfs.md
       - 幅優先探索(BFS): algorithms/bfs.md
     - Number Theory:
-      - 約数: algorithms/factor.md
+      - 約数の個数をカウント: algorithms/count_divisor.md
+      - 約数を列挙: algorithms/make_divisors.md
+      - 素数判定: algorithms/is_prime.md
+      - 素因数分解: algorithms/prime_factorize.md
+      - 素数を列挙: algorithms/prime_boolean_table.md
     - Data Structure:
       - Union Find: algorithms/union_find.md
+      - Union Find: algorithms/weighted_union_find.md
