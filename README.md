@@ -1,4 +1,4 @@
-# Coding Challenge Note
+# [Coding Challenge Note](https://xkumiyu.github.io/coding-challenge-note/)
 
 [![Actions Status][actions-status]][actions] [![codecov][codecov-status]][codecov]
 

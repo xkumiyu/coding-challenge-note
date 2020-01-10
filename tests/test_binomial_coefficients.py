@@ -1,4 +1,4 @@
-from algorithms.comb import Comb
+from algorithms.binomial_coefficients import Comb
 
 
 def test_comb():

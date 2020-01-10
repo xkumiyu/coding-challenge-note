@@ -14,6 +14,9 @@ mkdocs = "*"
 mkdocs-material = "*"
 pymdown-extensions = "*"
 
+[scripts]
+serve = "mkdocs serve"
+
 [requires]
 python_version = "3.7"
 

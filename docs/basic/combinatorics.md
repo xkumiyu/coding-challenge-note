@@ -28,6 +28,8 @@ from scipy.misc import comb
 comb(n, k, exact=True)
 ```
 
+[フェルマーの小定理を用いた二項係数の計算](../algorithms/binomial_coefficients.md)
+
 ## 階乗
 
 ``` py
@@ -44,4 +46,16 @@ inv = [1] * N
 inv[N - 1] = pow(fac[N - 1], mod - 2, mod)
 for i in range(N - 1, 0, -1):
     inv[i - 1] = (inv[i] * i) % mod
+```
+
+## mod
+
+``` py
+# b　の逆元
+# mod空間では除算が逆元の積になる
+pow(b, mod - 2, mod)
+
+# a // b % mod
+# a * pow(b, mod - 2, mod) % mod
+# が同じ
 ```
