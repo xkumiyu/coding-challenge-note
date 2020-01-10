@@ -35,7 +35,7 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
@@ -123,7 +123,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="https://xkumiyu.github.io/coding-challenge-note/" title="Coding Challenge Note" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <i class="md-icon">code</i>
           
         </a>
       </div>
@@ -193,7 +193,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://xkumiyu.github.io/coding-challenge-note/" title="Coding Challenge Note" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <i class="md-icon">code</i>
       
     </a>
     Coding Challenge Note
@@ -305,8 +305,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/dfs/" title="深さ優先探索(DFS)" class="md-nav__link">
-      深さ優先探索(DFS)
+    <a href="../algorithms/dfs/" title="深さ優先探索（DFS）" class="md-nav__link">
+      深さ優先探索（DFS）
     </a>
   </li>
 
@@ -317,8 +317,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/bfs/" title="幅優先探索(BFS)" class="md-nav__link">
-      幅優先探索(BFS)
+    <a href="../algorithms/bfs/" title="幅優先探索（BFS）" class="md-nav__link">
+      幅優先探索（BFS）
     </a>
   </li>
 
@@ -449,8 +449,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../algorithms/weighted_union_find/" title="Union Find" class="md-nav__link">
-      Union Find
+    <a href="../algorithms/weighted_union_find/" title="Weighted Union Find" class="md-nav__link">
+      Weighted Union Find
     </a>
   </li>
 
@@ -490,10 +490,37 @@
     累積和
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    累積積
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    累積max
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xor" class="md-nav__link">
+    累積XOR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     二分探索
   </a>
   
@@ -507,14 +534,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     最大公約数と最小公倍数
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     文字列
   </a>
   
@@ -528,35 +555,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     最短経路
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    計算量, 高速化
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    メモ化
+    計算量・高速化
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    再帰回数の上限
+    メモ化
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
+    再帰回数の上限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
     その他気をつけること
   </a>
   
@@ -587,7 +614,7 @@
 <span class="n">B</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
 </pre></div>
 
-<p>累積積</p>
+<h3 id="_2">累積積<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span>
 <span class="n">B</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">mul</span><span class="p">))</span>
 </pre></div>
@@ -597,7 +624,7 @@
 <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">144</span><span class="p">,</span> <span class="mi">1296</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
-<p>累積max</p>
+<h3 id="max">累積max<a class="headerlink" href="#max" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="nb">max</span><span class="p">))</span>
 </pre></div>
 
@@ -606,11 +633,11 @@
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </pre></div>
 
-<p>累積XOR</p>
+<h3 id="xor">累積XOR<a class="headerlink" href="#xor" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">operator</span><span class="o">.</span><span class="n">xor</span><span class="p">))</span>
 </pre></div>
 
-<h2 id="_2">二分探索<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">二分探索<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">bisect</span> <span class="kn">import</span> <span class="n">bisect_left</span><span class="p">,</span> <span class="n">bisect_right</span>
 
 <span class="c1"># x と等しい値の探索(index)</span>
@@ -632,7 +659,7 @@
 <span class="c1"># が同じ</span>
 </pre></div>
 
-<h2 id="_3">最大公約数と最小公倍数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_4">最大公約数と最小公倍数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="c1"># 最大公約数, python 3.5 から math.gcd</span>
 <span class="kn">from</span> <span class="nn">fractions</span> <span class="kn">import</span> <span class="n">gcd</span>
 <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -642,7 +669,7 @@
   <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">//</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </pre></div>
 
-<h2 id="_4">文字列<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_5">文字列<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="n">alphabet</span> <span class="o">=</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span>
 
 <span class="c1"># 大文字/小文字に変換</span>
@@ -661,15 +688,15 @@
         <span class="k">return</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
 </pre></div>
 
-<h2 id="_5">最短経路<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">最短経路<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.sparse.csgraph</span> <span class="kn">import</span> <span class="n">floyd_warshall</span>
 </pre></div>
 
-<h2 id="_6">計算量, 高速化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_7">計算量・高速化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
-<li>pythonでTLEの場合、pypyを試してみる</li>
+<li>PythonでTLEの場合、pypyを試してみる</li>
 </ul>
-<h2 id="_7">メモ化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_8">メモ化<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
 
 <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
@@ -677,14 +704,14 @@
     <span class="k">pass</span>
 </pre></div>
 
-<h2 id="_8">再帰回数の上限<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<h2 id="_9">再帰回数の上限<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <p>デフォルトでは1000回までである
-再帰関数を用いているときREになった場合は上限を上げてみる</p>
+再帰関数を用いているときREになった場合は上限を上げてみる。</p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">setrecursionlimit</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
 </pre></div>
 
-<h2 id="_9">その他気をつけること<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h2 id="_10">その他気をつけること<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
 <ul>
 <li>デバッグ時の<code>print</code>がないか確認する</li>
 <li><code>Yes</code>と<code>YES</code>など出力に気をつける</li>
