@@ -17,9 +17,5 @@ pymdown-extensions = "*"
 [requires]
 python_version = "3.7"
 
-[scripts]
-s = "mkdocs serve"
-deploy = "mkdocs gh-deploy"
-
 [pipenv]
 allow_prereleases = true
