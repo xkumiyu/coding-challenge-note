@@ -27,7 +27,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+    - name: Install dependencies
+      run: yarn install
     - name: Lint with markdownlint
-      run: |
-        npm install
-        npm run lint
+      run: yarn run markdownlint docs
+    - name: Lint with textlint
+      run: yarn run textlint docs

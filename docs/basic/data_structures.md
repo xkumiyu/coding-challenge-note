@@ -37,7 +37,7 @@ from itertools import product
     (1, 1, 1)
     ```
 
-### 2次元リストをflatten（一次元）に変換する
+### 2次元リストをflatten（1次元）に変換する
 
 ``` py
 [x for l in A for x in l]

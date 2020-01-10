@@ -1,6 +1,6 @@
 # 線分交差判定
 
-線分ABと線分CDが交差しているかどうか判定する
+線分ABと線分CDが交差しているか判定する
 
 ``` py
 def is_ientersected_1d(a, b, c, d, closed_section=False):

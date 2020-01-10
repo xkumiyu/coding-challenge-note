@@ -1,11 +1,14 @@
 site_name: Coding Challenge Note
-site_author: 'xkumiyu'
-site_url: 'https://xkumiyu.github.io/coding-challenge-note/'
+site_author: xkumiyu
+site_url: https://xkumiyu.github.io/coding-challenge-note/
 
 copyright: 'Copyright &copy; 2020 xkumiyu'
 
 theme:
   name: 'material'
+  logo:
+    icon: 'code'
+  favicon: 'assets/images/favicon.ico'
   language: 'ja'
   palette:
     primary: 'indigo'
@@ -57,8 +60,8 @@ nav:
     - 組合せ論: basic/combinatorics.md
   - Algorithms:
     - Graph Theory:
-      - 深さ優先探索(DFS): algorithms/dfs.md
-      - 幅優先探索(BFS): algorithms/bfs.md
+      - 深さ優先探索（DFS）: algorithms/dfs.md
+      - 幅優先探索（BFS）: algorithms/bfs.md
     - Number Theory:
       - 約数の個数をカウント: algorithms/count_divisor.md
       - 約数を列挙: algorithms/make_divisors.md
@@ -67,4 +70,4 @@ nav:
       - 素数を列挙: algorithms/prime_boolean_table.md
     - Data Structure:
       - Union Find: algorithms/union_find.md
-      - Union Find: algorithms/weighted_union_find.md
+      - Weighted Union Find: algorithms/weighted_union_find.md

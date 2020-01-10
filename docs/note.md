@@ -9,7 +9,7 @@ B = [x for x in accumulate(A)]
 B = list(accumulate(A))
 ```
 
-累積積
+### 累積積
 
 ``` py
 import operator
@@ -22,7 +22,7 @@ B = list(accumulate(A, operator.mul))
 [3, 12, 72, 144, 144, 1296, 0, 0, 0, 0]
 ```
 
-累積max
+### 累積max
 
 ``` py
 B = list(accumulate(A, max))
@@ -34,7 +34,7 @@ B = list(accumulate(A, max))
 >>> [3, 4, 6, 6, 6, 9, 9, 9, 9, 9]
 ```
 
-累積XOR
+### 累積XOR
 
 ``` py
 B = list(accumulate(A, operator.xor))
@@ -107,9 +107,9 @@ def ceil(x, y):
 from scipy.sparse.csgraph import floyd_warshall
 ```
 
-## 計算量, 高速化
+## 計算量・高速化
 
-- pythonでTLEの場合、pypyを試してみる
+- PythonでTLEの場合、pypyを試してみる
 
 ## メモ化
 
@@ -124,7 +124,7 @@ def f(n):
 ## 再帰回数の上限
 
 デフォルトでは1000回までである
-再帰関数を用いているときREになった場合は上限を上げてみる
+再帰関数を用いているときREになった場合は上限を上げてみる。
 
 ``` py
 import sys
