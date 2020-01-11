@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/weighted_union_find/">
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/binomial_coefficients/">
       
       
         <meta name="author" content="xkumiyu">
@@ -40,7 +40,7 @@
     
     
       
-        <title>Weighted Union Find - Coding Challenge Note</title>
+        <title>二項係数 - Coding Challenge Note</title>
       
     
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#weighted-union-find" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Weighted Union Find
+                二項係数
               
             </span>
           
@@ -382,10 +382,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" checked>
     
     <label class="md-nav__link" for="nav-2-2">
       Number Theory
@@ -473,11 +475,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../binomial_coefficients/" title="二項係数" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="二項係数" class="md-nav__link md-nav__link--active">
       二項係数
     </a>
+    
   </li>
 
         
@@ -502,12 +513,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
     
     <label class="md-nav__link" for="nav-2-3">
       Data Structure
@@ -535,49 +544,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Weighted Union Find
-      </label>
-    
-    <a href="./" title="Weighted Union Find" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../weighted_union_find/" title="Weighted Union Find" class="md-nav__link">
       Weighted Union Find
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    コード
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -608,22 +579,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">目次</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    コード
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -635,40 +590,34 @@
               
                 
                 
-                <h1 id="weighted-union-find">Weighted Union Find<a class="headerlink" href="#weighted-union-find" title="Permanent link">&para;</a></h1>
-<h2 id="_1">コード<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">WeightedUnionFind</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">par</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">diff_weight</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+                <h1 id="_1">二項係数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>フェルマーの小定理を用いた二項係数の計算</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">Comb</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">mod</span><span class="o">=</span><span class="mi">10</span> <span class="o">**</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">7</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;前処理</span>
 
-    <span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">par</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">x</span>
+<span class="sd">        計算量: O(N)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mod</span> <span class="o">=</span> <span class="n">mod</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fac</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">inv</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">N</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fac</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fac</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span> <span class="o">%</span> <span class="n">mod</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inv</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">pow</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">mod</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mod</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span>
+
+    <span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;二項係数の計算</span>
+
+<span class="sd">        計算量: O(1)</span>
+
+<span class="sd">        Examples:</span>
+<span class="sd">            &gt;&gt;&gt; comb = Comb(10)</span>
+<span class="sd">            &gt;&gt;&gt; comb.calc(10, 2)</span>
+<span class="sd">            45</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fac</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">inv</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">inv</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="n">k</span><span class="p">]</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">mod</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">root</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">par</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">diff_weight</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_weight</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">par</span><span class="p">[</span><span class="n">x</span><span class="p">]]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">par</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">=</span> <span class="n">root</span>
-            <span class="k">return</span> <span class="n">root</span>
-
-    <span class="k">def</span> <span class="nf">union</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
-        <span class="n">w</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">w</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">par</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">diff_weight</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span>
-
-    <span class="k">def</span> <span class="nf">is_same</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">weight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">diff_weight</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
-
-    <span class="k">def</span> <span class="nf">diff</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">weight</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span>
 </pre></div>
                 
                   
@@ -691,7 +640,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../union_find/" title="Union Find" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../prime_boolean_table/" title="素数を列挙" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -700,11 +649,25 @@
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                Union Find
+                素数を列挙
               </span>
             </div>
           </a>
         
+        
+          <a href="../is_intersected/" title="交差判定" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                交差判定
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>

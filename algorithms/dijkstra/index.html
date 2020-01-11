@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/is_ientersected/">
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/dijkstra/">
       
       
         <meta name="author" content="xkumiyu">
@@ -40,7 +40,7 @@
     
     
       
-        <title>線分交差判定 - Coding Challenge Note</title>
+        <title>ダイクストラ法 - Coding Challenge Note</title>
       
     
     
@@ -138,7 +138,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                線分交差判定
+                ダイクストラ法
               
             </span>
           
@@ -256,6 +256,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/accumulation/" title="累積和" class="md-nav__link">
+      累積和
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../basic/other/" title="その他" class="md-nav__link">
+      その他
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -265,10 +289,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Algorithms
@@ -284,10 +310,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       Graph Theory
@@ -323,6 +351,39 @@
   </li>
 
         
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="ダイクストラ法" class="md-nav__link md-nav__link--active">
+      ダイクストラ法
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../warshall_floyd/" title="ワーシャルフロイド法" class="md-nav__link">
+      ワーシャルフロイド法
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -346,6 +407,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gcd_lcm/" title="最大公約数と最小公倍数" class="md-nav__link">
+      最大公約数と最小公倍数
+    </a>
+  </li>
+
         
           
           
@@ -403,6 +476,30 @@
   <li class="md-nav__item">
     <a href="../prime_boolean_table/" title="素数を列挙" class="md-nav__link">
       素数を列挙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../binomial_coefficients/" title="二項係数" class="md-nav__link">
+      二項係数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../is_intersected/" title="交差判定" class="md-nav__link">
+      交差判定
     </a>
   </li>
 
@@ -493,22 +590,64 @@
               
                 
                 
-                <h1 id="_1">線分交差判定<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>線分ABと線分CDが交差しているか判定する</p>
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">is_ientersected_1d</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">closed_section</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="n">tc</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span>
-    <span class="n">td</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">d</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span>
-    <span class="n">ta</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span>
-    <span class="n">tb</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">d</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
+                <h1 id="_1">ダイクストラ法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
 
-<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">is_ientersected</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">closed_section</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">s</span> <span class="o">*</span> <span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">false</span>
-    <span class="n">ta</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">tb</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">class</span> <span class="nc">Graph</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;隣接リストによる有向グラフ&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">add_edge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">dst</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="n">src</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">dst</span><span class="p">,</span> <span class="n">weight</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">get_nodes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">Dijkstra</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;ダイクストラ法（二分ヒープ）による最短経路探索</span>
+
+<span class="sd">    計算量: O((E+V)logV)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">start</span><span class="p">):</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">graph</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dist</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="kc">None</span><span class="p">)</span>
+
+        <span class="n">Q</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">heappush</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">start</span><span class="p">))</span>
+
+        <span class="k">while</span> <span class="n">Q</span><span class="p">:</span>
+            <span class="n">dist_u</span><span class="p">,</span> <span class="n">u</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dist_u</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">v</span><span class="p">,</span> <span class="n">weight</span> <span class="ow">in</span> <span class="n">g</span><span class="p">[</span><span class="n">u</span><span class="p">]:</span>
+                <span class="n">alt</span> <span class="o">=</span> <span class="n">dist_u</span> <span class="o">+</span> <span class="n">weight</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">alt</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">alt</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">v</span><span class="p">]</span> <span class="o">=</span> <span class="n">u</span>
+                    <span class="n">heappush</span><span class="p">(</span><span class="n">Q</span><span class="p">,</span> <span class="p">(</span><span class="n">alt</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">shortest_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goal</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dist</span><span class="p">[</span><span class="n">goal</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">shortest_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">goal</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="n">goal</span>
+        <span class="k">while</span> <span class="n">node</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">prev</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">path</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
                 
                   
@@ -527,6 +666,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../bfs/" title="幅優先探索（BFS）" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                幅優先探索（BFS）
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../warshall_floyd/" title="ワーシャルフロイド法" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                ワーシャルフロイド法
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

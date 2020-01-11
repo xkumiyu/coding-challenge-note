@@ -299,6 +299,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mod" class="md-nav__link">
+    mod
+  </a>
+  
+</li>
+      
       
       
       
@@ -307,6 +314,30 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../accumulation/" title="累積和" class="md-nav__link">
+      累積和
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other/" title="その他" class="md-nav__link">
+      その他
+    </a>
   </li>
 
         
@@ -377,6 +408,30 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/dijkstra/" title="ダイクストラ法" class="md-nav__link">
+      ダイクストラ法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/warshall_floyd/" title="ワーシャルフロイド法" class="md-nav__link">
+      ワーシャルフロイド法
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -400,6 +455,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/gcd_lcm/" title="最大公約数と最小公倍数" class="md-nav__link">
+      最大公約数と最小公倍数
+    </a>
+  </li>
+
         
           
           
@@ -457,6 +524,30 @@
   <li class="md-nav__item">
     <a href="../../algorithms/prime_boolean_table/" title="素数を列挙" class="md-nav__link">
       素数を列挙
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/binomial_coefficients/" title="二項係数" class="md-nav__link">
+      二項係数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../algorithms/is_intersected/" title="交差判定" class="md-nav__link">
+      交差判定
     </a>
   </li>
 
@@ -560,6 +651,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mod" class="md-nav__link">
+    mod
+  </a>
+  
+</li>
+      
       
       
       
@@ -599,6 +697,7 @@
 <span class="n">comb</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">exact</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
+<p><a href="../../algorithms/binomial_coefficients/">フェルマーの小定理を用いた二項係数の計算</a></p>
 <h2 id="_4">階乗<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><span class="c1"># 階乗</span>
 <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span>
@@ -613,6 +712,16 @@
 <span class="n">inv</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">fac</span><span class="p">[</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">mod</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mod</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">inv</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">mod</span>
+</pre></div>
+
+<h2 id="mod">mod<a class="headerlink" href="#mod" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="c1"># b　の逆元</span>
+<span class="c1"># mod空間では除算が逆元の積になる</span>
+<span class="nb">pow</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">mod</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">mod</span><span class="p">)</span>
+
+<span class="c1"># a // b % mod</span>
+<span class="c1"># a * pow(b, mod - 2, mod) % mod</span>
+<span class="c1"># が同じ</span>
 </pre></div>
                 
                   
@@ -650,13 +759,13 @@
           </a>
         
         
-          <a href="../../algorithms/dfs/" title="深さ優先探索（DFS）" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../accumulation/" title="累積和" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                深さ優先探索（DFS）
+                累積和
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
