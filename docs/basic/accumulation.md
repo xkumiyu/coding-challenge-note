@@ -60,11 +60,11 @@ class Imos1d(object):
         self.n = n
         self.x = [0] * n
 
-    def add(self, l, r):
-        self.x[l] += 1
-        self.x[r] -= 1
+    def add(self, l, r, v=1):
+        self.x[l] += v
+        self.x[r] -= v
 
     def calc(self):
-        for i in range(self.n - 1):
+        for i in range(1, self.n):
             self.x[i] += self.x[i - 1]
 ```

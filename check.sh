@@ -10,10 +10,10 @@ check () {
 }
 
 # code
-pipenv run flake8 algorithms >/dev/null 2>&1
+pipenv run flake8 algorithms tests >/dev/null 2>&1
 check $? "flake8"
 
-pipenv run black algorithms --check >/dev/null 2>&1
+pipenv run black algorithms tests --check >/dev/null 2>&1
 check $? "black"
 
 pipenv run pytest --cov=algorithms --cov-report=html >/dev/null 2>&1
