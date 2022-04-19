@@ -1,7 +1,7 @@
 class Comb(object):
     """フェルマーの小定理を用いた二項係数の計算"""
 
-    def __init__(self, N, mod=10 ** 9 + 7):
+    def __init__(self, N, mod=10**9 + 7):
         """前処理
 
         計算量: O(N)
