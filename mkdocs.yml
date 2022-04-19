@@ -5,23 +5,21 @@ site_url: https://xkumiyu.github.io/coding-challenge-note/
 copyright: 'Copyright &copy; 2020 xkumiyu'
 
 theme:
-  name: 'material'
-  logo:
-    icon: 'code'
-  favicon: 'assets/images/favicon.ico'
-  language: 'ja'
+  name: material
+  icon:
+    logo: material/code-tags
+  favicon: assets/images/favicon.ico
+  language: ja
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
+    primary: indigo
+    accent: indigo
 
 extra:
   search:
     language: 'ja, en'
   social:
-    - type: 'github'
-      link: 'https://github.com/xkumiyu'
-    - type: 'twitter'
-      link: 'https://twitter.com/xkumiyu'
+    - icon: fontawesome/brands/github
+      link: https://github.com/xkumiyu
 
 google_analytics:
   - 'UA-44938218-6'

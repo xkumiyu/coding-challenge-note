@@ -8,7 +8,7 @@ class Imos1d(object):
         self.n = n
         self.x = [0] * n
 
-    def add(self, l, r, v=1):
+    def add(self, l, r, v=1):  # noqa: E741
         self.x[l] += v
         self.x[r] -= v
 
