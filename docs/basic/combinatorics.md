@@ -2,7 +2,7 @@
 
 ## 順列
 
-配列Aからk個を選ぶ順列のリスト
+配列`A`から`k`個を選ぶ順列のリスト
 
 ``` py
 from itertools import permutations
@@ -11,14 +11,14 @@ permutations(A, k)
 
 ## 組合せ
 
-配列Aからk個を選ぶ組み合わせのリスト
+配列`A`から`k`個を選ぶ組み合わせのリスト
 
 ``` py
 from itertools import combinations
 combinations(A, k)
 ```
 
-n個からk個を選ぶ組み合わせ数（nCk）
+`n`個から`k`個を選ぶ組み合わせ数（nCk）
 
 - scipy > 1.0.0 scipy.special
 - n=10^4くらいまで
