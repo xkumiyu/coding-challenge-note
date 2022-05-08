@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Node 12.x
+    - name: Set up Node 12
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: "12.x"
     - run: yarn install
     - name: Lint with markdownlint
       run: yarn run markdownlint docs
@@ -22,11 +22,10 @@ jobs:
     needs: [lint]
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-python@v3
+    - name: Set up Python 3.9
+      uses: ./.github/actions/setup-python
       with:
-        python-version: 3.x
-    - uses: abatilo/actions-poetry@v2.1.4
-    - run: poetry install
+        python-version: "3.9"
     - name: Build
       run: poetry run mkdocs build
     - name: Deploy
