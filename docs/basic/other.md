@@ -9,7 +9,7 @@ PythonでTLEの場合、pypyで実行してみる。
 ``` py
 from functools import lru_cache
 
-@lru_cache(maxsize=1000)
+@lru_cache(maxsize=None)
 def f(n):
     pass
 ```
@@ -23,20 +23,6 @@ def f(n):
 ``` py
 import sys
 sys.setrecursionlimit(10**6)
-```
-
-## 二分探索
-
-``` py
-from bisect import bisect_left, bisect_right
-
-# x と等しい値の探索(index)
-i = bisect_left(A, x)
-if i != len(A) and A[i] == x:
-  return i
-
-# x 以上の値が何個あるか(find_ge)
-n = len(A) - bisect_left(A, x)
 ```
 
 ## 文字列
