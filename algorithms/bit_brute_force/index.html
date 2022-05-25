@@ -10,14 +10,14 @@
         <meta name="author" content="xkumiyu">
       
       
-        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/basic/data_structures/">
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/bit_brute_force/">
       
       <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
     
     
       
-        <title>データ構造 - Coding Challenge Note</title>
+        <title>bit全探索 - Coding Challenge Note</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#bit" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              データ構造
+              bit全探索
             
           </span>
         </div>
@@ -186,15 +186,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../stdin/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../basic/stdin/" class="md-tabs__link">
         Basic
       </a>
     </li>
@@ -204,6 +202,8 @@
         
   
   
+    
+  
 
 
   
@@ -215,7 +215,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../algorithms/dfs/" class="md-tabs__link">
+      <a href="../dfs/" class="md-tabs__link md-tabs__link--active">
         Algorithms
       </a>
     </li>
@@ -308,14 +308,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -350,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../stdin/" class="md-nav__link">
+      <a href="../../basic/stdin/" class="md-nav__link">
         入出力
       </a>
     </li>
@@ -362,167 +360,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          データ構造
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../basic/data_structures/" class="md-nav__link">
         データ構造
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    リスト
-  </a>
-  
-    <nav class="md-nav" aria-label="リスト">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    リストの初期化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    多重リストのループ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2flatten1" class="md-nav__link">
-    2次元リストをflatten（1次元）に変換する
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    リストの出力
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    辞書
-  </a>
-  
-    <nav class="md-nav" aria-label="辞書">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    デフォルト値を持つ辞書の初期化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    辞書のソート
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    要素の数え上げ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    集合
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    キュー
-  </a>
-  
-    <nav class="md-nav" aria-label="キュー">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    優先度付きキュー
-  </a>
-  
-    <nav class="md-nav" aria-label="優先度付きキュー">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    最小ヒープ
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    最大ヒープ
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -534,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../combinatorics/" class="md-nav__link">
+      <a href="../../basic/combinatorics/" class="md-nav__link">
         組合せ論
       </a>
     </li>
@@ -548,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../accumulation/" class="md-nav__link">
+      <a href="../../basic/accumulation/" class="md-nav__link">
         累積和
       </a>
     </li>
@@ -562,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../other/" class="md-nav__link">
+      <a href="../../basic/other/" class="md-nav__link">
         その他
       </a>
     </li>
@@ -582,12 +424,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -658,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/dfs/" class="md-nav__link">
+      <a href="../dfs/" class="md-nav__link">
         深さ優先探索（DFS）
       </a>
     </li>
@@ -672,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/bfs/" class="md-nav__link">
+      <a href="../bfs/" class="md-nav__link">
         幅優先探索（BFS）
       </a>
     </li>
@@ -686,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/dijkstra/" class="md-nav__link">
+      <a href="../dijkstra/" class="md-nav__link">
         ダイクストラ法
       </a>
     </li>
@@ -700,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/warshall_floyd/" class="md-nav__link">
+      <a href="../warshall_floyd/" class="md-nav__link">
         ワーシャルフロイド法
       </a>
     </li>
@@ -767,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/gcd_lcm/" class="md-nav__link">
+      <a href="../gcd_lcm/" class="md-nav__link">
         最大公約数と最小公倍数
       </a>
     </li>
@@ -781,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/count_divisor/" class="md-nav__link">
+      <a href="../count_divisor/" class="md-nav__link">
         約数の個数をカウント
       </a>
     </li>
@@ -795,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/make_divisors/" class="md-nav__link">
+      <a href="../make_divisors/" class="md-nav__link">
         約数を列挙
       </a>
     </li>
@@ -809,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/is_prime/" class="md-nav__link">
+      <a href="../is_prime/" class="md-nav__link">
         素数判定
       </a>
     </li>
@@ -823,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/prime_factorize/" class="md-nav__link">
+      <a href="../prime_factorize/" class="md-nav__link">
         素因数分解
       </a>
     </li>
@@ -837,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/prime_boolean_table/" class="md-nav__link">
+      <a href="../prime_boolean_table/" class="md-nav__link">
         素数を列挙
       </a>
     </li>
@@ -851,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/binomial_coefficients/" class="md-nav__link">
+      <a href="../binomial_coefficients/" class="md-nav__link">
         二項係数
       </a>
     </li>
@@ -865,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/is_intersected/" class="md-nav__link">
+      <a href="../is_intersected/" class="md-nav__link">
         交差判定
       </a>
     </li>
@@ -884,14 +728,16 @@
               
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
       
       
       
@@ -920,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/binary_search/" class="md-nav__link">
+      <a href="../binary_search/" class="md-nav__link">
         二分探索
       </a>
     </li>
@@ -932,11 +778,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../algorithms/bit_brute_force/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         bit全探索
       </a>
+      
     </li>
   
 
@@ -989,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/union_find/" class="md-nav__link">
+      <a href="../union_find/" class="md-nav__link">
         Union Find
       </a>
     </li>
@@ -1003,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/weighted_union_find/" class="md-nav__link">
+      <a href="../weighted_union_find/" class="md-nav__link">
         Weighted Union Find
       </a>
     </li>
@@ -1038,29 +894,16 @@
                 
 
 
-<h1 id="_1">データ構造<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">リスト<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">リストの初期化<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># x[N][M]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">M</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>多重リストは内包表記で初期化する</p>
-</div>
-<h3 id="_4">多重リストのループ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>product</code> を使うと短く書ける</li>
-</ul>
+<h1 id="bit">bit全探索<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h1>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">product</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="n">N</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">product</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">product</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">repeat</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
-<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-<span class="o">...</span>
-<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1070,106 +913,25 @@
 <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 </div>
-<h3 id="2flatten1">2次元リストをflatten（1次元）に変換する<a class="headerlink" href="#2flatten1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="n">N</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">N</span><span class="p">):</span>
+  <span class="n">p</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="n">j</span><span class="p">))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">A</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 </div>
-<h3 id="_5">リストの出力<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">ans</span><span class="p">)))</span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ans</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">ans</span><span class="p">)))</span>
-<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
-</code></pre></div>
-</div>
-<h2 id="_6">辞書<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">デフォルト値を持つ辞書の初期化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>引数に <code>int</code> を指定すると、keyはすべて0で初期化される。</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
-<span class="n">defaultdict</span><span class="p">(</span><span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;, {&#39;</span><span class="n">key</span><span class="s1">&#39;: 1})</span>
-</code></pre></div>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>引数に <code>lambda</code> を用いて任意の値を指定できる。</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
-<span class="n">defaultdict</span><span class="p">(</span><span class="o">&lt;</span><span class="n">function</span> <span class="o">&lt;</span><span class="k">lambda</span><span class="o">&gt;</span> <span class="n">at</span> <span class="mh">0x10bffe5e0</span><span class="o">&gt;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
-</code></pre></div>
-</div>
-<h3 id="_8">辞書のソート<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p><code>itemgetter</code> を使用するほうが <code>lambda</code> より若干高速である。</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
-<span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
-
-<span class="c1"># key</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-<span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
-
-<span class="c1"># value</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="p">[(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
-</code></pre></div>
-</div>
-<h3 id="_9">要素の数え上げ<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-</code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
-<span class="n">Counter</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
-</code></pre></div>
-</div>
-<h2 id="_10">集合<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="ow">in</span> <span class="nb">set</span>
-</code></pre></div>
-<p>重複を含まない要素の探索の場合は <code>set</code> を使うほうが高速である。</p>
-<ul>
-<li><code>list</code>: O(N)</li>
-<li><code>set</code>: O(1)</li>
-</ul>
-<h2 id="_11">キュー<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
-<span class="n">que</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
-</code></pre></div>
-<h3 id="_12">優先度付きキュー<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
-<ul>
-<li>heappush: O(logN)</li>
-<li>heappop: O(1)</li>
-</ul>
-<h4 id="_13">最小ヒープ<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
-<span class="n">que</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">heappush</span><span class="p">(</span><span class="n">que</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">que</span><span class="p">)</span>
-</code></pre></div>
-<h4 id="_14">最大ヒープ<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
-<span class="n">que</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">heappush</span><span class="p">(</span><span class="n">que</span><span class="p">,</span> <span class="n">v</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">v</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="n">que</span><span class="p">)</span> <span class="o">*</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div>
 
               
             </article>
@@ -1188,7 +950,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../stdin/" class="md-footer__link md-footer__link--prev" aria-label="前: 入出力" rel="prev">
+        <a href="../binary_search/" class="md-footer__link md-footer__link--prev" aria-label="前: 二分探索" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1197,20 +959,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              入出力
+              二分探索
             </div>
           </div>
         </a>
       
       
         
-        <a href="../combinatorics/" class="md-footer__link md-footer__link--next" aria-label="次: 組合せ論" rel="next">
+        <a href="../union_find/" class="md-footer__link md-footer__link--next" aria-label="次: Union Find" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              組合せ論
+              Union Find
             </div>
           </div>
           <div class="md-footer__button md-icon">
