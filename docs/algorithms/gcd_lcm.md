@@ -2,15 +2,6 @@
 
 ## 最大公約数
 
-### Python <= 3.4
-
-```py
-from fractions import gcd
-gcd(a, b)
-```
-
-### Python >= 3.5
-
 ```py
 from math import gcd
 gcd(a, b)

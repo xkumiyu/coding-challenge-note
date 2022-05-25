@@ -13,6 +13,13 @@ theme:
   palette:
     primary: indigo
     accent: indigo
+  features:
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.integrate
 
 extra:
   search:
@@ -20,10 +27,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/xkumiyu
-
-google_analytics:
-  - 'UA-44938218-6'
-  - 'auto'
+  analytics:
+    provider: google
+    property: UA-44938218-6
 
 markdown_extensions:
   - admonition
@@ -37,8 +43,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  # - pymdownx.emoji:
+  #     emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
@@ -52,8 +58,10 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 
 nav:
+  - Home:
+    - index.md
   - Basic:
-    - 標準入力: basic/stdin.md
+    - 入出力: basic/stdin.md
     - データ構造: basic/data_structures.md
     - 組合せ論: basic/combinatorics.md
     - 累積和: basic/accumulation.md
@@ -73,6 +81,9 @@ nav:
       - 素数を列挙: algorithms/prime_boolean_table.md
       - 二項係数: algorithms/binomial_coefficients.md
       - 交差判定: algorithms/is_intersected.md
+    - Search:
+      - 二分探索: algorithms/binary_search.md
+      - bit全探索: algorithms/bit_brute_force.md
     - Data Structure:
       - Union Find: algorithms/union_find.md
       - Weighted Union Find: algorithms/weighted_union_find.md

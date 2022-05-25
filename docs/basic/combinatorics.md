@@ -4,7 +4,7 @@
 
 配列`A`から`k`個を選ぶ順列のリスト
 
-``` py
+```py
 from itertools import permutations
 permutations(A, k)
 ```
@@ -13,26 +13,45 @@ permutations(A, k)
 
 配列`A`から`k`個を選ぶ組み合わせのリスト
 
-``` py
+```py
 from itertools import combinations
 combinations(A, k)
 ```
 
+配列`A`から重複を許して`k`個を選ぶ組み合わせのリスト
+
+```py
+from itertools import combinations_with_replacement
+combinations_with_replacement(A, k)
+```
+
 `n`個から`k`個を選ぶ組み合わせ数（nCk）
 
-- scipy > 1.0.0 scipy.special
-- n=10^4くらいまで
-
-``` py
-from scipy.misc import comb
+```py
+from scipy.special import comb
 comb(n, k, exact=True)
+```
+
+!!! Note
+    $n=10^4$ で200ms程度, $n=10^5$ で2sec程度
+
+`n`個から重複を許して`k`個を選ぶ組み合わせ数
+
+```py
+from scipy.special import comb
+comb(n, k, exact=True, repetition=True)
+```
+
+```py
+# n個からn + k - 1個を選ぶ組み合わせ数と等しい
+comb(n + k - 1, k, exact=True)
 ```
 
 [フェルマーの小定理を用いた二項係数の計算](../algorithms/binomial_coefficients.md)
 
 ## 階乗
 
-``` py
+```py
 # 階乗
 from math import factorial
 factorial(x)
@@ -50,7 +69,7 @@ for i in range(N - 1, 0, -1):
 
 ## mod
 
-``` py
+```py
 # b　の逆元
 # mod空間では除算が逆元の積になる
 pow(b, mod - 2, mod)

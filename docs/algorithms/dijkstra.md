@@ -1,61 +1,91 @@
 # ダイクストラ法
 
+2点間の最短経路を求めるアルゴリズム
+
+## 計算量
+
+- $O((E + V)\log{V})$
+    - $V$: 頂点の数
+    - $E$: 辺の数
+
+## Code
+
 ```py
 from collections import defaultdict
 from heapq import heappop, heappush
 
 
-class Graph(object):
-    """隣接リストによる有向グラフ"""
+def dijkstra(graph, start):
+    dist = defaultdict(lambda: float("inf"))
+    dist[start] = 0
+    prev = {}
 
-    def __init__(self):
-        self.graph = defaultdict(list)
+    Q = []
+    heappush(Q, (dist[start], start))
 
-    def __len__(self):
-        return len(self.graph)
+    while Q:
+        dist_u, u = heappop(Q)
+        if dist[u] < dist_u:
+            continue
+        for v, c in graph[u]:
+            if dist[v] > dist_u + c:
+                dist[v] = dist_u + c
+                prev[v] = u
+            heappush(Q, (dist[v], v))
 
-    def add_edge(self, src, dst, weight=1):
-        self.graph[src].append((dst, weight))
+    return dist, prev
+```
 
-    def get_nodes(self):
-        return self.graph.keys()
+隣接グラフによる有向グラフを構築する。
 
+```py
+g = defaultdict(list)
+for _ in range(N):
+    src, dst, cost = map(int, input().split())
+    g[src].append((dst, cost))
+    g[dst].append((src, cost))
+```
 
-class Dijkstra(object):
-    """ダイクストラ法（二分ヒープ）による最短経路探索
+## Example
 
-    計算量: O((E+V)logV)
-    """
+```py
+>>> edges = [
+...     (0, 1, 5),
+...     (0, 2, 4),
+...     (0, 3, 2),
+...     (1, 2, 2),
+...     (1, 5, 6),
+...     (2, 3, 3),
+...     (2, 4, 2),
+...     (3, 4, 6),
+...     (4, 5, 4),
+... ]
+...
+>>> g = defaultdict(list)
+>>> for src, dest, cost in edges:
+...     g[src].append((dst, cost))
+...     g[dst].append((src, cost))
+...
+>>> v = 0 # 始点
+>>> u = 5 # 終点
+>>> dist, prev = dijkstra(g, v)
+```
 
-    def __init__(self, graph, start):
-        g = graph.graph
+### 最短距離を求める
 
-        self.dist = defaultdict(lambda: float("inf"))
-        self.dist[start] = 0
-        self.prev = defaultdict(lambda: None)
+```py
+>>> dist[u]
+10
+```
 
-        Q = []
-        heappush(Q, (self.dist[start], start))
+### 最短経路を求める
 
-        while Q:
-            dist_u, u = heappop(Q)
-            if self.dist[u] < dist_u:
-                continue
-            for v, weight in g[u]:
-                alt = dist_u + weight
-                if self.dist[v] > alt:
-                    self.dist[v] = alt
-                    self.prev[v] = u
-                    heappush(Q, (alt, v))
-
-    def shortest_distance(self, goal):
-        return self.dist[goal]
-
-    def shortest_path(self, goal):
-        path = []
-        node = goal
-        while node is not None:
-            path.append(node)
-            node = self.prev[node]
-        return path[::-1]
+```py
+>>> path = []
+>>> node = u
+>>> while node is not None:
+...     path.append(node)
+...     node = prev[node]
+>>> path[::-1]
+[0, 2, 4, 5]
 ```

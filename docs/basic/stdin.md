@@ -1,24 +1,36 @@
-# 標準入力
+# 入出力
+
+## 標準入力での実行方法
+
+ファイルから標準入力を受け取る
+
+```sh
+python main.py < input.txt
+```
+
+```sh
+cat input.txt | python main.py
+```
 
 ## よく使う標準入力
 
 ### 文字列
 
-``` text
+```text
 string
 ```
 
-``` py
+```py
 S = input()
 ```
 
 ### 数字
 
-``` text
+```text
 1
 ```
 
-``` py
+```py
 N = int(input())
 ```
 
@@ -26,57 +38,61 @@ N = int(input())
 
 #### 別々の変数
 
-``` text
+```text
 10 5
 ```
 
-``` py
+```py
 N, K = map(int, input().split())
 ```
 
 #### 1つの変数（リスト）
 
-``` text
+```text
 1 2 3 4 5
 ```
 
-``` py
+```py
 A = [int(x) for x in input().split()]
+```
+
+```py
+A = list(map(int, input().split()))
 ```
 
 ### 複数行の文字列
 
-``` text
+```text
 #..#
 ..##
 ```
 
-``` py
+```py
 S = [list(input()) for _ in range(H)]
 ```
 
 !!! Example
 
-    ``` py
+    ```py
     >>> print(S)
     [['#', '.', '.', '#'], ['.', '.', '#', '#']]
     ```
 
 ### 複数行の数字
 
-``` text
+```text
 1
 2
 3
 ```
 
-``` py
+```py
 A = [int(input()) for _ in range(N)]
 ```
 
 ### 複数行に複数の数字
 
-``` text
+```text
 1 4
 2 5
 3 6
@@ -84,20 +100,20 @@ A = [int(input()) for _ in range(N)]
 
 #### 1つの2次元リスト
 
-``` py
+```py
 A = [[int(x) for x in input().split()] for _ in range(H)]
 ```
 
 !!! Example
 
-    ``` py
+    ```py
     >>> print(A)
     [[1, 4], [2, 5], [3, 6]]
     ```
 
 #### 別々の1次元リスト
 
-``` py
+```py
 a, b = [None] * N, [None] * N
 for i in range(N):
     a[i], b[i] = map(int, input().split())
@@ -105,7 +121,7 @@ for i in range(N):
 
 !!! Example
 
-    ``` py
+    ```py
     >>> print(a)
     [1, 2, 3]
     >>> print(b)
@@ -114,7 +130,7 @@ for i in range(N):
 
 ## 標準入力の高速化
 
-``` py
+```py
 import sys
 input = sys.stdin.readline
 ```
@@ -129,3 +145,19 @@ input = sys.stdin.readline
 ![input_vs_sys_stdin_readline](../assets/images/input_vs_sys_stdin_readline.png)
 
 出展: [Pythonの知っておくと良い細かい処理速度の違い8個](https://www.kumilog.net/entry/python-speed-comp#input-%E3%81%A8-sysstdinreadline)
+
+## リストの出力
+
+リストを空白区切りや改行区切りで出力する際、アンパックを用いると簡単に出力できる
+
+!!! Example
+
+    ```py
+    >>> a = [1, 2, 3]
+    >>> print(*a)
+    1 2 3
+    >>> print(*a, sep="\n")
+    1
+    2
+    3
+    ```
