@@ -150,6 +150,10 @@ input = sys.stdin.readline
 
 リストを空白区切りや改行区切りで出力する際、アンパックを用いると簡単に出力できる
 
+```py
+print(*a)
+```
+
 !!! Example
 
     ```py
