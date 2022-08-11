@@ -8,9 +8,13 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Install poetry
+      run: pip install poetry
+      shell: bash
     - uses: actions/setup-python@v3
       with:
         python-version: ${{ inputs.python-version }}
-    - uses: abatilo/actions-poetry@v2.1.4
-    - run: poetry install
+        cache: poetry
+    - name: Install python packages
+      run: poetry install
       shell: bash

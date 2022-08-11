@@ -31,7 +31,7 @@ def dijkstra(graph, start):
             if dist[v] > dist_u + c:
                 dist[v] = dist_u + c
                 prev[v] = u
-            heappush(Q, (dist[v], v))
+                heappush(Q, (dist[v], v))
 
     return dist, prev
 ```
@@ -62,7 +62,7 @@ for _ in range(N):
 ... ]
 ...
 >>> g = defaultdict(list)
->>> for src, dest, cost in edges:
+>>> for src, dst, cost in edges:
 ...     g[src].append((dst, cost))
 ...     g[dst].append((src, cost))
 ...
