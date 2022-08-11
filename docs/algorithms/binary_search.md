@@ -85,7 +85,7 @@ def binary_search(left, right):
 
 ### Example
 
-x を挿入できる場所の探索(`bisect_left`と同じ)
+`x`を挿入できる場所の探索(`bisect_left`と同じ)
 
 ```py
 >>> A = [2, 4, 5, 7]
