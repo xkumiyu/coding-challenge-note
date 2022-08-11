@@ -30,7 +30,14 @@ sys.setrecursionlimit(10**6)
 ### アルファベット
 
 ```py
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
+import string
+alphabet = string.ascii_lowercase
+```
+
+以下と同じ
+
+```py
+alphabet = "abcdefghijklmnopqrstuvwxyz"
 ```
 
 ### 大文字に変換

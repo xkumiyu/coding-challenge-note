@@ -4,8 +4,9 @@
 
 ### リストの初期化
 
+`x[N][M]`
+
 ```py
-# x[N][M]
 x = [[None] * M for _ in range(N)]
 ```
 
@@ -14,7 +15,7 @@ x = [[None] * M for _ in range(N)]
 
 ### 多重リストのループ
 
-- `product` を使うと短く書ける
+`product` を使うと短く書ける
 
 ```py
 from itertools import product
@@ -49,20 +50,6 @@ from itertools import product
     >>> A = [[0, 1], [2, 3]]
     >>> [x for l in A for x in l]
     [0, 1, 2, 3]
-    ```
-
-### リストの出力
-
-```py
-print(' '.join(map(str, ans)))
-```
-
-!!! Example
-
-    ```py
-    >>> ans = [1, 2, 3]
-    >>> print(' '.join(map(str, ans)))
-    1 2 3
     ```
 
 ## 辞書
@@ -139,8 +126,8 @@ x in set
 
 重複を含まない要素の探索の場合は `set` を使うほうが高速である。
 
-- `list`: O(N)
-- `set`: O(1)
+- `list`: $O(N)$
+- `set`: $O(1)$
 
 ## キュー
 
@@ -151,8 +138,8 @@ que = deque()
 
 ### 優先度付きキュー
 
-- heappush: O(logN)
-- heappop: O(1)
+- heappush: $O(log{N})$
+- heappop: $O(1)$
 
 #### 最小ヒープ
 
