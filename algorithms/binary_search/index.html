@@ -800,16 +800,89 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    標準ライブラリ
+  </a>
+  
+    <nav class="md-nav" aria-label="標準ライブラリ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#x" class="md-nav__link">
     x と等しい値の探索
   </a>
   
+    <nav class="md-nav" aria-label="x と等しい値の探索">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#x_1" class="md-nav__link">
     x 以上の値が何個あるか
   </a>
+  
+    <nav class="md-nav" aria-label="x 以上の値が何個あるか">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    自作
+  </a>
+  
+    <nav class="md-nav" aria-label="自作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example_2" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -933,6 +1006,7 @@
 
 
 <h1 id="_1">二分探索<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">標準ライブラリ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bisect</span> <span class="kn">import</span> <span class="n">bisect_left</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">bisect</span> <span class="kn">import</span> <span class="n">bisect_right</span>
@@ -942,40 +1016,65 @@
 <p class="admonition-title">Note</p>
 <p>ソートされたリストに対して用いること</p>
 </div>
-<h2 id="x">x と等しい値の探索<a class="headerlink" href="#x" title="Permanent link">&para;</a></h2>
+<h3 id="x">x と等しい値の探索<a class="headerlink" href="#x" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-  <span class="c1"># 等しい値のインデックス</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="c1"># 等しい値のインデックス</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-  <span class="c1"># 等しい値はない</span>
-  <span class="k">pass</span>
+    <span class="c1"># 等しい値はない</span>
+    <span class="k">pass</span>
 </code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="o">...</span>   <span class="n">i</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="o">...</span>   <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
-<span class="o">...</span>     <span class="k">return</span> <span class="n">i</span>
+<span class="o">...</span>     <span class="n">i</span> <span class="o">=</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="ow">and</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">x</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="n">i</span>
+<span class="o">...</span>     <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>         <span class="k">return</span> <span class="s2">&quot;Not Found&quot;</span>
 <span class="o">...</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="s1">&#39;Not Found&#39;</span>
 </code></pre></div>
-</div>
-<h2 id="x_1">x 以上の値が何個あるか<a class="headerlink" href="#x_1" title="Permanent link">&para;</a></h2>
+<h3 id="x_1">x 以上の値が何個あるか<a class="headerlink" href="#x_1" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </code></pre></div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="mi">4</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="o">-</span> <span class="n">bisect_left</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="mi">2</span>
 </code></pre></div>
-</div>
+<h2 id="_3">自作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">\log{N}</span><script type="math/tex">\log{N}</script></span></p>
+<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">is_ok</span><span class="p">(</span><span class="n">mid</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="c1"># 求める点が区間[left, mid]に含まれる場合Trueになるように作成する</span>
+    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
+    <span class="k">while</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">!=</span> <span class="n">right</span><span class="p">:</span>
+        <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">left</span> <span class="o">+</span> <span class="n">right</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">is_ok</span><span class="p">(</span><span class="n">mid</span><span class="p">):</span>
+            <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">left</span> <span class="o">=</span> <span class="n">mid</span>
+    <span class="k">return</span> <span class="n">right</span>
+</code></pre></div>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<p><code>x</code>を挿入できる場所の探索(<code>bisect_left</code>と同じ)</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">is_ok</span><span class="p">(</span><span class="n">mid</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">A</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">binary_search</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="o">...</span> <span class="mi">1</span>
+</code></pre></div>
 
               
             </article>
