@@ -81,6 +81,7 @@ nav:
       - 素数を列挙: algorithms/prime_boolean_table.md
       - 二項係数: algorithms/binomial_coefficients.md
       - 交差判定: algorithms/is_intersected.md
+      - 拡張ユークリッドの互除法: algorithms/extension_gcd.md
     - Search:
       - 二分探索: algorithms/binary_search.md
       - bit全探索: algorithms/bit_brute_force.md

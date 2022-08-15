@@ -1,6 +1,6 @@
 # Weighted Union Find
 
-## コード
+## Code
 
 ```py
 class WeightedUnionFind(object):

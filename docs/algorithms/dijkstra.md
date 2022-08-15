@@ -46,7 +46,7 @@ for _ in range(N):
     g[dst].append((src, cost))
 ```
 
-## Example
+## Examples
 
 ```py
 >>> edges = [

@@ -40,7 +40,7 @@ def dfs(graph, start):
         # do something with v
 
         for u in graph[v]:
-            if visited:
+            if visited[u]:
                 continue
             stack.append(u)
             visited[u] = True
