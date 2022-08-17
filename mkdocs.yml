@@ -72,6 +72,7 @@ nav:
       - 幅優先探索（BFS）: algorithms/bfs.md
       - ダイクストラ法: algorithms/dijkstra.md
       - ワーシャルフロイド法: algorithms/warshall_floyd.md
+      - 強連結成分分解（SCC）: algorithms/scc.md
     - Number Theory:
       - 最大公約数と最小公倍数: algorithms/gcd_lcm.md
       - 約数の個数をカウント: algorithms/count_divisor.md
