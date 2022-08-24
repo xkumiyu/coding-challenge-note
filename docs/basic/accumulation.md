@@ -62,24 +62,3 @@ import operator
 
 B = list(accumulate(A, operator.xor))
 ```
-
-## imos法
-
-<https://imoz.jp/algorithms/imos_method.html>
-
-### 1次元
-
-```py
-class Imos1d(object):
-    def __init__(self, n):
-        self.n = n
-        self.x = [0] * n
-
-    def add(self, l, r, v=1):
-        self.x[l] += v
-        self.x[r] -= v
-
-    def calc(self):
-        for i in range(1, self.n):
-            self.x[i] += self.x[i - 1]
-```

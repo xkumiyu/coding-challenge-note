@@ -87,4 +87,6 @@ nav:
       - bit全探索: algorithms/bit_brute_force.md
     - Data Structure:
       - Union Find: algorithms/union_find.md
-      - Weighted Union Find: algorithms/weighted_union_find.md
+      - 重み付きUnion Find: algorithms/weighted_union_find.md
+    - Other:
+      - いもす法: algorithms/imos_method.md
