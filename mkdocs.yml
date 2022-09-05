@@ -86,6 +86,7 @@ nav:
       - 二分探索: algorithms/binary_search.md
       - bit全探索: algorithms/bit_brute_force.md
     - Data Structure:
+      - セグメント木: algorithms/segment_tree.md
       - Union Find: algorithms/union_find.md
       - 重み付きUnion Find: algorithms/weighted_union_find.md
     - Other:
