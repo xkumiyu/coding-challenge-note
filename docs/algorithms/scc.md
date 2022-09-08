@@ -4,7 +4,7 @@
 
 ## Complexity
 
-2回DFSを行う
+2回[DFS](./dfs.md)を行う
 
 - $O(N + M)$
     - $N$はグラフの頂点の数
