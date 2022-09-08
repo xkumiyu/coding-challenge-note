@@ -75,10 +75,10 @@ nav:
     - Number Theory:
       - 最大公約数と最小公倍数: algorithms/gcd_lcm.md
       - 約数の個数をカウント: algorithms/count_divisor.md
-      - 約数を列挙: algorithms/make_divisors.md
+      - 約数列挙: algorithms/make_divisors.md
       - 素数判定: algorithms/is_prime.md
+      - 素数列挙: algorithms/prime_enumeration.md
       - 素因数分解: algorithms/prime_factorize.md
-      - 素数を列挙: algorithms/prime_boolean_table.md
       - 二項係数: algorithms/binomial_coefficients.md
       - 拡張ユークリッドの互除法: algorithms/extension_gcd.md
     - Search:
