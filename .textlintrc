@@ -4,7 +4,14 @@
     "preset-ja-spacing": true,
     "preset-ja-technical-writing": {
       "no-exclamation-question-mark": false,
-      "ja-no-mixed-period": false
+      "ja-no-mixed-period": false,
+      "max-kanji-continuous-len": {
+        "allow": [
+          "一次不定方程式",
+          "強連結成分分解",
+          "線分交差判定"
+        ]
+      }
     },
     "spellcheck-tech-word": true
   }

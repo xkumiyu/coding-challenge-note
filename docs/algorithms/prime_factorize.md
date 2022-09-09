@@ -4,7 +4,7 @@
 
 ## SPFを用いた方法
 
-### 計算量
+### Complexity
 
 - 前処理: $O(N\log{\log{N}})$
 - クエリ: $O(\log{N})$
@@ -14,7 +14,7 @@
 前処理
 
 ```py
-def calc_spf(n):
+def calc_spf(n: int) -> list:
     spf = [i for i in range(n + 1)]
     i = 2
     while i * i <= n:
@@ -31,14 +31,12 @@ def calc_spf(n):
 クエリ
 
 ```py
-from collections import defaultdict
-
-
-def prime_factorize(spf, n):
-    factors = defaultdict(int)
+def prime_factorize(spf: list, n: int) -> dict:
+    factors = {}
     while n != 1:
-        factors[spf[n]] += 1
-        n //= spf[n]
+        m = spf[n]
+        factors[m] = factors.get(m, 0) + 1
+        n //= m
     return factors
 ```
 
@@ -49,19 +47,19 @@ def prime_factorize(spf, n):
 >>> spf
 [0, 1, 2, 3, 2, 5, 2, 7, 2, 3, 2, 11, 2]
 >>> prime_factorize(spf, 12)
-defaultdict(<class 'int'>, {2: 2, 3: 1})
+{2: 2, 3: 1}
 ```
 
 ## 試し割り法
 
-### 計算量
+### Complexity
 
 $O(\sqrt{N})$
 
 ### Code
 
 ```py
-def prime_factorize(n):
+def prime_factorize(n: int) -> list:
     if n == 1:
         return [1]
 
