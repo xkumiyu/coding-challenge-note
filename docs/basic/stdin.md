@@ -136,15 +136,7 @@ input = sys.stdin.readline
 ```
 
 !!! Note
-    10倍以上高速化できるので、$10^6$ を超える場合は使うこと
-
-### 処理速度の比較
-
-データ数が$10^6$のときの処理速度
-
-![input_vs_sys_stdin_readline](../assets/images/input_vs_sys_stdin_readline.png)
-
-出展: [Pythonの知っておくと良い細かい処理速度の違い8個](https://www.kumilog.net/entry/python-speed-comp#input-%E3%81%A8-sysstdinreadline)
+    $10^6$のとき、392msから37msに10倍以上の高速化ができる
 
 ## リストの出力
 

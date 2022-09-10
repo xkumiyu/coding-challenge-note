@@ -3,18 +3,21 @@ description: "install python and poetry, then install python packages with poetr
 inputs:
   python-version:
     default: "3.x"
-    required: false
-    description: 'version of python'
+    required: true
+    description: "version of python"
+  poetry-version:
+    default: "1.2.0"
+    required: true
+    description: "version of poetry"
 runs:
   using: "composite"
   steps:
-    - name: Install poetry
-      run: pip install poetry
-      shell: bash
     - uses: actions/setup-python@v3
       with:
         python-version: ${{ inputs.python-version }}
-        cache: poetry
+    - name: Install poetry
+      run: pip install poetry==${{ inputs.poetry-version }}
+      shell: bash
     - name: Install python packages
       run: poetry install
       shell: bash

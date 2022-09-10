@@ -69,12 +69,6 @@ for i in range(N - 1, 0, -1):
 
 ## mod
 
-```py
-# b　の逆元
-# mod空間では除算が逆元の積になる
-pow(b, mod - 2, mod)
+mod空間において加算、減算、乗算は通常の四則演算と同じだが、除算は逆元の積をとる
 
-# a // b % mod
-# a * pow(b, mod - 2, mod) % mod
-# が同じ
-```
+`a // b % mod` ではなく `pow(b, mod - 2, mod)` を用いる
