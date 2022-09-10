@@ -10,14 +10,14 @@
         <meta name="author" content="xkumiyu">
       
       
-        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/prime_factorize/">
+        <link rel="canonical" href="https://xkumiyu.github.io/coding-challenge-note/algorithms/extension_gcd/">
       
       <link rel="icon" href="../../assets/images/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
-        <title>素因数分解 - Coding Challenge Note</title>
+        <title>拡張ユークリッドの互除法 - Coding Challenge Note</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              素因数分解
+              拡張ユークリッドの互除法
             
           </span>
         </div>
@@ -702,113 +702,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          素因数分解
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../prime_factorize/" class="md-nav__link">
         素因数分解
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#spf" class="md-nav__link">
-    SPFを用いた方法
-  </a>
-  
-    <nav class="md-nav" aria-label="SPFを用いた方法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#complexity" class="md-nav__link">
-    Complexity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    試し割り法
-  </a>
-  
-    <nav class="md-nav" aria-label="試し割り法">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#complexity_1" class="md-nav__link">
-    Complexity
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#code_1" class="md-nav__link">
-    Code
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example_1" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -832,11 +730,93 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../extension_gcd/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          拡張ユークリッドの互除法
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         拡張ユークリッドの互除法
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#condition" class="md-nav__link">
+    Condition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    Complexity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    １つの解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一般解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1108,71 +1088,68 @@
                 
 
 
-<h1 id="_1">素因数分解<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>整数<span class="arithmatex"><span class="MathJax_Preview">N</span><script type="math/tex">N</script></span>を素因数分解する</p>
-<h2 id="spf">SPFを用いた方法<a class="headerlink" href="#spf" title="Permanent link">&para;</a></h2>
-<h3 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h3>
-<ul>
-<li>前処理: <span class="arithmatex"><span class="MathJax_Preview">O(N\log{\log{N}})</span><script type="math/tex">O(N\log{\log{N}})</script></span></li>
-<li>クエリ: <span class="arithmatex"><span class="MathJax_Preview">O(\log{N})</span><script type="math/tex">O(\log{N})</script></span></li>
-</ul>
-<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h3>
-<p>前処理</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">calc_spf</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
-    <span class="n">spf</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">spf</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">:</span>
-            <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span>
-            <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">spf</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="n">j</span><span class="p">:</span>
-                    <span class="n">spf</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span>
-                <span class="n">j</span> <span class="o">+=</span> <span class="n">i</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">spf</span>
+<h1 id="_1">拡張ユークリッドの互除法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>一次不定方程式 <span class="arithmatex"><span class="MathJax_Preview">ax + by = c</span><script type="math/tex">ax + by = c</script></span> の整数解を求める</p>
+<h2 id="condition">Condition<a class="headerlink" href="#condition" title="Permanent link">&para;</a></h2>
+<p>整数解をもつ条件は <span class="arithmatex"><span class="MathJax_Preview">c</span><script type="math/tex">c</script></span> が <span class="arithmatex"><span class="MathJax_Preview">\gcd(a, b)</span><script type="math/tex">\gcd(a, b)</script></span> で割り切れること</p>
+<h2 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex"><span class="MathJax_Preview">O(\log{\min{(a, b)}})</span><script type="math/tex">O(\log{\min{(a, b)}})</script></span></p>
+<h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">extgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span><span class="p">:</span>
+        <span class="n">d</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">extgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">-=</span> <span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span>
+        <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
 </code></pre></div>
-<p>クエリ</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">prime_factorize</span><span class="p">(</span><span class="n">spf</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-    <span class="n">factors</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="n">spf</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
-        <span class="n">factors</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">factors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">n</span> <span class="o">//=</span> <span class="n">m</span>
-    <span class="k">return</span> <span class="n">factors</span>
+<div class="highlight"><pre><span></span><code><span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">extgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">c</span> <span class="o">%</span> <span class="n">d</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;解なし&quot;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">*=</span> <span class="n">c</span> <span class="o">//</span> <span class="n">d</span>
+<span class="n">y</span> <span class="o">*=</span> <span class="n">c</span> <span class="o">//</span> <span class="n">d</span>
 </code></pre></div>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">spf</span> <span class="o">=</span> <span class="n">calc_spf</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">spf</span>
-<span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">prime_factorize</span><span class="p">(</span><span class="n">spf</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="p">{</span><span class="mi">2</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="1">１つの解<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">6x + 8y = 10</span><script type="math/tex">6x + 8y = 10</script></span> の整数解を求める</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">extgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="o">-</span><span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">%</span> <span class="n">d</span>
+<span class="mi">0</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">//</span> <span class="n">d</span><span class="p">)</span>
+<span class="o">-</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">//</span> <span class="n">d</span><span class="p">)</span>
+<span class="mi">5</span>
 </code></pre></div>
-<h2 id="_2">試し割り法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="complexity_1">Complexity<a class="headerlink" href="#complexity_1" title="Permanent link">&para;</a></h3>
-<p><span class="arithmatex"><span class="MathJax_Preview">O(\sqrt{N})</span><script type="math/tex">O(\sqrt{N})</script></span></p>
-<h3 id="code_1">Code<a class="headerlink" href="#code_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">prime_factorize</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="n">i</span><span class="p">,</span> <span class="n">factors</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">*</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
-        <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">n</span> <span class="o">//=</span> <span class="n">i</span>
-            <span class="n">factors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">factors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">factors</span>
+<p>よって、<span class="arithmatex"><span class="MathJax_Preview">x=-5, y=5</span><script type="math/tex">x=-5, y=5</script></span></p>
+<p>なお、<code>extgcd</code>の戻り値である <span class="arithmatex"><span class="MathJax_Preview">(x, y) = (-1, 1)</span><script type="math/tex">(x, y) = (-1, 1)</script></span> は <span class="arithmatex"><span class="MathJax_Preview">6x + 8y = d(=\gcd(a, b))</span><script type="math/tex">6x + 8y = d(=\gcd(a, b))</script></span> の解</p>
+<h3 id="_2">一般解<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">6x + 8y = 10</span><script type="math/tex">6x + 8y = 10</script></span> の整数解の一般解を求める</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">extgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">%</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x1</span> <span class="o">*=</span> <span class="n">c</span> <span class="o">//</span> <span class="n">d</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y1</span> <span class="o">*=</span> <span class="n">c</span> <span class="o">//</span> <span class="n">d</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span>
+<span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># x := (b // d)t + x1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">//</span> <span class="n">d</span>
+<span class="mi">4</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x1</span>
+<span class="o">-</span><span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="c1"># y := (-a // d)t + y1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="o">-</span><span class="n">a</span> <span class="o">//</span> <span class="n">d</span>
+<span class="o">-</span><span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y1</span>
+<span class="mi">5</span>
 </code></pre></div>
-<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">prime_factorize</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">Counter</span><span class="p">(</span><span class="n">prime_factorize</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span>
-<span class="n">Counter</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
-</code></pre></div>
+<p>よって、一般解は任意の整数<span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>を用いて<span class="arithmatex"><span class="MathJax_Preview">x = 4t -5, y = -3t + 5</span><script type="math/tex">x = 4t -5, y = -3t + 5</script></span></p>
 
 
   
@@ -1198,7 +1175,7 @@
     <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../prime_enumeration/" class="md-footer__link md-footer__link--prev" aria-label="前: 素数列挙" rel="prev">
+        <a href="../binomial_coefficients/" class="md-footer__link md-footer__link--prev" aria-label="前: 二項係数" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1207,20 +1184,20 @@
               <span class="md-footer__direction">
                 前
               </span>
-              素数列挙
+              二項係数
             </div>
           </div>
         </a>
       
       
         
-        <a href="../binomial_coefficients/" class="md-footer__link md-footer__link--next" aria-label="次: 二項係数" rel="next">
+        <a href="../binary_search/" class="md-footer__link md-footer__link--next" aria-label="次: 二分探索" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              二項係数
+              二分探索
             </div>
           </div>
           <div class="md-footer__button md-icon">
