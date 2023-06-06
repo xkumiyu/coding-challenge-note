@@ -25,7 +25,9 @@ class UnionFind:
 
     def union(self, x: int, y: int) -> None:
         """x と y のグループを結合"""
-        if self.is_same(x, y):
+        x = self.find(x)
+        y = self.find(y)
+        if x != y:
             return
         if self.rank[x] < self.rank[y]:
             x, y = y, x
