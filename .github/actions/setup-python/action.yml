@@ -6,7 +6,7 @@ inputs:
     required: true
     description: "version of python"
   poetry-version:
-    default: "1.2.0"
+    default: "1.5.1"
     required: true
     description: "version of poetry"
 runs:
